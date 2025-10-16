@@ -1,5 +1,5 @@
 import { A, D, O, pipe, R } from '@mobily/ts-belt';
-import type { AppResult, DependencyType, PackageJson, PackageName } from '@/domain/types';
+import type { AppResult, DependencyType, PackageJson, PackageName } from '../domain/types.js';
 
 export async function readPackageJson(path: string): Promise<AppResult<PackageJson>> {
   try {

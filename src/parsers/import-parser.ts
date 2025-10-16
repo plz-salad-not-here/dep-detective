@@ -2,7 +2,7 @@ import { A, O, pipe, S } from '@mobily/ts-belt';
 import type { Option } from '@mobily/ts-belt/dist/types/Option';
 import { Glob } from 'bun';
 import { match, P } from 'ts-pattern';
-import type { FilePath, ImportStatement, PackageName } from '@/domain/types';
+import type { FilePath, ImportStatement, PackageName } from '../domain/types.js';
 
 const IMPORT_REGEX = /(?:import|from)\s+['"]([^'"]+)['"]|require\s*\(['"]([^'"]+)['"]\)/g;
 

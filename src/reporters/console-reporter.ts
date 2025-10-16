@@ -1,5 +1,5 @@
 import { match } from 'ts-pattern';
-import type { AnalysisResult, OutputFormat } from '@/domain/types';
+import type { AnalysisResult, OutputFormat } from '../domain/types.js';
 
 const COLORS = {
   reset: '\x1b[0m',

@@ -1,9 +1,9 @@
 import { AR, pipe, R } from '@mobily/ts-belt';
 import { match } from 'ts-pattern';
-import { analyzeDependencies } from '@/analyzers/dependency-analyzer';
-import { parseArgs, showHelp } from '@/cli/options';
-import { readPackageJson } from '@/parsers/package-parser';
-import { hasIssues, report } from '@/reporters/console-reporter';
+import { analyzeDependencies } from './analyzers/dependency-analyzer.js';
+import { parseArgs, showHelp } from './cli/options.js';
+import { readPackageJson } from './parsers/package-parser.js';
+import { hasIssues, report } from './reporters/console-reporter.js';
 
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
