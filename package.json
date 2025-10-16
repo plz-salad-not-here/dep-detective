@@ -33,11 +33,15 @@
     "package-manager",
     "bun"
   ],
-  "author": "",
+  "author": "yuniithings@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/plz-salad-not-here/dep-guard.git"
+  },
+  "homepage": "https://github.com/plz-salad-not-here/dep-guard#readme",
+  "bugs": {
+    "url": "https://github.com/plz-salad-not-here/dep-guard/issues"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.6",
