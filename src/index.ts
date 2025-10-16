@@ -10,7 +10,7 @@ async function main(): Promise<void> {
   const optionsResult = parseArgs(args);
 
   if (R.isError(optionsResult)) {
-    const errorMsg = R.getExn(optionsResult);
+    const errorMsg = optionsResult._0;
     const message = match(errorMsg)
       .with('help', () => showHelp())
       .otherwise((err) => `Error: ${err}`);
@@ -46,6 +46,5 @@ async function main(): Promise<void> {
   }
 }
 
-if (import.meta.main) {
-  await main();
-}
+// Run main if this is the entry point
+await main();

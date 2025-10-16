@@ -1,10 +1,11 @@
 import { A, D, O, pipe, R } from '@mobily/ts-belt';
+import { readFile } from 'node:fs/promises';
 import type { AppResult, DependencyType, PackageJson, PackageName } from '../domain/types.js';
 
 export async function readPackageJson(path: string): Promise<AppResult<PackageJson>> {
   try {
-    const file = Bun.file(path);
-    const content = await file.json();
+    const fileContent = await readFile(path, 'utf-8');
+    const content = JSON.parse(fileContent);
 
     return R.Ok({
       name: O.fromNullable(content.name),

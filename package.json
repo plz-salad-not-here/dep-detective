@@ -1,9 +1,9 @@
 {
   "name": "dep-detective",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A TypeScript dependency analyzer that detects unused and misplaced dependencies",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "type": "module",
   "bin": {
     "dep-detective": "./bin/cli.js"
@@ -16,11 +16,13 @@
     "format": "bunx biome format --write src/",
     "format:check": "bunx biome format src/",
     "check": "bunx biome check --write src/",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "validate": "bun run typecheck && bun run lint && bun test",
+    "prepublishOnly": "bun run build",
     "prepare": "husky"
   },
   "files": [
-    "src",
+    "dist",
     "bin"
   ],
   "keywords": [
@@ -53,6 +55,7 @@
   },
   "dependencies": {
     "@mobily/ts-belt": "4.0.0-rc.5",
+    "glob": "^11.0.3",
     "ts-pattern": "^5.8.0"
   }
 }
