@@ -48,10 +48,10 @@ export function parseArgs(args: ReadonlyArray<string>): AppResult<CliOptions> {
 
 export function showHelp(): string {
   return `
-dep-guard - Dependency analyzer for TypeScript projects
+dep-detective - Dependency analyzer for TypeScript projects
 
 Usage:
-  dep-guard [options]
+  dep-detective [options]
 
 Options:
   -t, --text    Output as text (default)
@@ -60,9 +60,9 @@ Options:
   -h, --help    Show this help message
 
 Examples:
-  dep-guard
-  dep-guard -j
-  dep-guard --all
-  dep-guard -j --all
+  dep-detective
+  dep-detective -j
+  dep-detective --all
+  dep-detective -j --all
 `;
 }
