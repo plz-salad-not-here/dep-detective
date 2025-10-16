@@ -16,7 +16,8 @@
     "format": "bunx biome format --write src/",
     "format:check": "bunx biome format src/",
     "check": "bunx biome check --write src/",
-    "validate": "bun run typecheck && bun run lint && bun test"
+    "validate": "bun run typecheck && bun run lint && bun test",
+    "prepare": "husky"
   },
   "files": [
     "src",
@@ -40,7 +41,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.6",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "husky": "^9.1.7"
   },
   "peerDependencies": {
     "typescript": "^5"
