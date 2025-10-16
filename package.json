@@ -1,12 +1,12 @@
 {
-  "name": "dep-guard",
-  "version": "1.0.0",
+  "name": "dep-detective",
+  "version": "0.0.1",
   "description": "A TypeScript dependency analyzer that detects unused and misplaced dependencies",
   "main": "src/index.ts",
   "module": "src/index.ts",
   "type": "module",
   "bin": {
-    "dep-guard": "./bin/cli.js"
+    "dep-detective": "./bin/cli.js"
   },
   "scripts": {
     "test": "bun test",
@@ -33,11 +33,15 @@
     "package-manager",
     "bun"
   ],
-  "author": "",
+  "author": "yuniithings@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/plz-salad-not-here/dep-detective.git"
+  },
+  "homepage": "https://github.com/plz-salad-not-here/dep-detective#readme",
+  "bugs": {
+    "url": "https://github.com/plz-salad-not-here/dep-detective/issues"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.6",

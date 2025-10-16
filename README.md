@@ -1,4 +1,4 @@
-# dep-guard
+# dep-detective 🕵️
 
 > [한국어](./README.ko.md) | English
 
@@ -16,13 +16,13 @@ A TypeScript dependency analyzer that detects unused and misplaced dependencies 
 ## Installation
 
 ```bash
-bun add -d dep-guard
+npm install -D dep-detective
 ```
 
-Or use with bunx:
+Or use with npx:
 
 ```bash
-bunx dep-guard
+npx dep-detective
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ bunx dep-guard
 Run in your project root:
 
 ```bash
-dep-guard
+npx dep-detective
 ```
 
 ### Options
@@ -44,21 +44,21 @@ dep-guard
 
 ```bash
 # Text output (default)
-dep-guard
+npx dep-detective
 
 # JSON output
-dep-guard -j
-dep-guard --json
+npx dep-detective -j
+npx dep-detective --json
 
 # Check all dependencies including devDependencies
-dep-guard --all
-dep-guard -a
+npx dep-detective --all
+npx dep-detective -a
 
 # Combine options
-dep-guard -j --all
+npx dep-detective -j --all
 
 # Show help
-dep-guard -h
+npx dep-detective -h
 ```
 
 ### Example Output
@@ -149,7 +149,7 @@ Add to your CI pipeline:
 
 ```yaml
 - name: Check dependencies
-  run: bunx dep-guard
+  run: npx dep-detective
 ```
 
 The command exits with code 1 if issues are found, perfect for CI/CD.
