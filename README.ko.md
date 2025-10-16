@@ -1,4 +1,4 @@
-# dep-guard
+# dep-detective 🕵️
 
 프로젝트에서 사용되지 않거나 잘못 배치된 의존성을 감지하는 TypeScript 의존성 분석 도구입니다.
 
@@ -14,13 +14,13 @@
 ## 설치
 
 ```bash
-bun add -d dep-guard
+npm install -D dep-detective
 ```
 
-또는 bunx로 바로 실행:
+또는 npx로 바로 실행:
 
 ```bash
-bunx dep-guard
+npx dep-detective
 ```
 
 ## 사용법
@@ -28,7 +28,7 @@ bunx dep-guard
 프로젝트 루트에서 실행:
 
 ```bash
-dep-guard
+npx dep-detective
 ```
 
 ### 옵션
@@ -42,21 +42,21 @@ dep-guard
 
 ```bash
 # 텍스트 출력 (기본값)
-dep-guard
+npx dep-detective
 
 # JSON 출력
-dep-guard -j
-dep-guard --json
+npx dep-detective -j
+npx dep-detective --json
 
 # devDependencies 포함 모든 의존성 검사
-dep-guard --all
-dep-guard -a
+npx dep-detective --all
+npx dep-detective -a
 
 # JSON 형식으로 모든 의존성 검사
-dep-guard -j --all
+npx dep-detective -j --all
 
 # 도움말 표시
-dep-guard -h
+npx dep-detective -h
 ```
 
 ### 출력 예시
