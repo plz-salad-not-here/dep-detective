@@ -1,6 +1,6 @@
 {
   "name": "dep-detective",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "A TypeScript dependency analyzer that detects unused and misplaced dependencies",
   "main": "dist/index.js",
   "module": "dist/index.js",
