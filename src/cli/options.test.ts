@@ -150,7 +150,7 @@ describe('parseArgs', () => {
 describe('showHelp', () => {
   test('should return help message', () => {
     const help = showHelp();
-    expect(help).toContain('dep-detective');
+    expect(help).toContain('deps-finder');
     expect(help).toContain('Usage:');
     expect(help).toContain('-t, --text');
     expect(help).toContain('-j, --json');

@@ -1,4 +1,4 @@
-# dep-detective 🕵️
+# deps-finder 🕵️
 
 > [한국어](./README.ko.md) | English
 
@@ -16,13 +16,13 @@ A TypeScript dependency analyzer that detects unused and misplaced dependencies 
 ## Installation
 
 ```bash
-npm install -D dep-detective
+npm install -D deps-finder
 ```
 
 Or use with npx:
 
 ```bash
-npx dep-detective
+npx deps-finder
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ npx dep-detective
 Run in your project root:
 
 ```bash
-npx dep-detective
+npx deps-finder
 ```
 
 ### Options
@@ -44,21 +44,21 @@ npx dep-detective
 
 ```bash
 # Text output (default)
-npx dep-detective
+npx deps-finder
 
 # JSON output
-npx dep-detective -j
-npx dep-detective --json
+npx deps-finder -j
+npx deps-finder --json
 
 # Check all dependencies including devDependencies
-npx dep-detective --all
-npx dep-detective -a
+npx deps-finder --all
+npx deps-finder -a
 
 # Combine options
-npx dep-detective -j --all
+npx deps-finder -j --all
 
 # Show help
-npx dep-detective -h
+npx deps-finder -h
 ```
 
 ### Example Output
@@ -149,7 +149,7 @@ Add to your CI pipeline:
 
 ```yaml
 - name: Check dependencies
-  run: npx dep-detective
+  run: npx deps-finder
 ```
 
 The command exits with code 1 if issues are found, perfect for CI/CD.
