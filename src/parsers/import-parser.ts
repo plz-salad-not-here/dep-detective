@@ -1,6 +1,7 @@
 import { A, O, pipe, S } from '@mobily/ts-belt';
 import type { Option } from '@mobily/ts-belt/dist/types/Option';
-import { Glob } from 'bun';
+import { readFile } from 'node:fs/promises';
+import { glob } from 'glob';
 import { match, P } from 'ts-pattern';
 import type { FilePath, ImportStatement, PackageName } from '../domain/types.js';
 
@@ -15,22 +16,11 @@ const EXCLUDE_PATTERNS = [
   '**/tests/**',
 ];
 
-function shouldExcludeFile(filePath: string): boolean {
-  return EXCLUDE_PATTERNS.some((pattern) => {
-    const regex = new RegExp(pattern.replace(/\*/g, '.*'));
-    return regex.test(filePath);
-  });
-}
-
 async function scanPattern(pattern: string): Promise<ReadonlyArray<FilePath>> {
-  const glob = new Glob(pattern);
-  const files: FilePath[] = [];
-
-  for await (const file of glob.scan('.')) {
-    if (!shouldExcludeFile(file)) {
-      files.push(file);
-    }
-  }
+  const files = await glob(pattern, {
+    ignore: EXCLUDE_PATTERNS,
+    nodir: true,
+  });
 
   return files;
 }
@@ -64,8 +54,7 @@ export async function extractImportsFromFile(
   filePath: FilePath,
 ): Promise<ReadonlyArray<ImportStatement>> {
   try {
-    const file = Bun.file(filePath);
-    const content = await file.text();
+    const content = await readFile(filePath, 'utf-8');
     return extractImportsFromContent(content);
   } catch {
     return [];
