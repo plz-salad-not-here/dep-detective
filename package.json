@@ -1,12 +1,12 @@
 {
-  "name": "dep-detective",
+  "name": "deps-finder",
   "version": "0.0.1",
   "description": "A TypeScript dependency analyzer that detects unused and misplaced dependencies",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "type": "module",
   "bin": {
-    "dep-detective": "./bin/cli.js"
+    "deps-finder": "./bin/cli.js"
   },
   "scripts": {
     "test": "bun test",
@@ -39,11 +39,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/plz-salad-not-here/dep-detective.git"
+    "url": "https://github.com/plz-salad-not-here/deps-finder.git"
   },
-  "homepage": "https://github.com/plz-salad-not-here/dep-detective#readme",
+  "homepage": "https://github.com/plz-salad-not-here/deps-finder#readme",
   "bugs": {
-    "url": "https://github.com/plz-salad-not-here/dep-detective/issues"
+    "url": "https://github.com/plz-salad-not-here/deps-finder/issues"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.6",

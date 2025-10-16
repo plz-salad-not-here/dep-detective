@@ -48,10 +48,10 @@ export function parseArgs(args: ReadonlyArray<string>): AppResult<CliOptions> {
 
 export function showHelp(): string {
   return `
-dep-detective - Dependency analyzer for TypeScript projects
+deps-finder - Dependency analyzer for TypeScript projects
 
 Usage:
-  dep-detective [options]
+  deps-finder [options]
 
 Options:
   -t, --text    Output as text (default)
@@ -60,9 +60,9 @@ Options:
   -h, --help    Show this help message
 
 Examples:
-  dep-detective
-  dep-detective -j
-  dep-detective --all
-  dep-detective -j --all
+  deps-finder
+  deps-finder -j
+  deps-finder --all
+  deps-finder -j --all
 `;
 }

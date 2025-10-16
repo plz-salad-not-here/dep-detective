@@ -1,4 +1,4 @@
-# dep-detective 🕵️
+# deps-finder 🕵️
 
 프로젝트에서 사용되지 않거나 잘못 배치된 의존성을 감지하는 TypeScript 의존성 분석 도구입니다.
 
@@ -14,13 +14,13 @@
 ## 설치
 
 ```bash
-npm install -D dep-detective
+npm install -D deps-finder
 ```
 
 또는 npx로 바로 실행:
 
 ```bash
-npx dep-detective
+npx deps-finder
 ```
 
 ## 사용법
@@ -28,7 +28,7 @@ npx dep-detective
 프로젝트 루트에서 실행:
 
 ```bash
-npx dep-detective
+npx deps-finder
 ```
 
 ### 옵션
@@ -42,21 +42,21 @@ npx dep-detective
 
 ```bash
 # 텍스트 출력 (기본값)
-npx dep-detective
+npx deps-finder
 
 # JSON 출력
-npx dep-detective -j
-npx dep-detective --json
+npx deps-finder -j
+npx deps-finder --json
 
 # devDependencies 포함 모든 의존성 검사
-npx dep-detective --all
-npx dep-detective -a
+npx deps-finder --all
+npx deps-finder -a
 
 # JSON 형식으로 모든 의존성 검사
-npx dep-detective -j --all
+npx deps-finder -j --all
 
 # 도움말 표시
-npx dep-detective -h
+npx deps-finder -h
 ```
 
 ### 출력 예시
@@ -171,7 +171,7 @@ CI 파이프라인에 추가:
 
 ```yaml
 - name: 의존성 검사
-  run: bunx dep-guard
+  run: bunx deps-finder
 ```
 
 문제가 발견되면 종료 코드 1을 반환하므로 CI/CD에 적합합니다.
