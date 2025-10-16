@@ -1,0 +1,52 @@
+{
+  "name": "dep-guard",
+  "version": "1.0.0",
+  "description": "A TypeScript dependency analyzer that detects unused and misplaced dependencies",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "type": "module",
+  "bin": {
+    "dep-guard": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "bun test",
+    "test:coverage": "bun test --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "bunx biome lint src/",
+    "format": "bunx biome format --write src/",
+    "format:check": "bunx biome format src/",
+    "check": "bunx biome check --write src/",
+    "validate": "bun run typecheck && bun run lint && bun test"
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "keywords": [
+    "dependency",
+    "analyzer",
+    "typescript",
+    "unused",
+    "devDependencies",
+    "npm",
+    "package-manager",
+    "bun"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.6",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@mobily/ts-belt": "4.0.0-rc.5",
+    "ts-pattern": "^5.8.0"
+  }
+}
