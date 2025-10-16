@@ -1,11 +1,11 @@
 import { A, pipe } from '@mobily/ts-belt';
-import type { AnalysisResult, PackageJson, PackageName } from '@/domain/types';
-import { getAllUsedPackages } from '@/parsers/import-parser';
+import type { AnalysisResult, PackageJson, PackageName } from '../domain/types.js';
+import { getAllUsedPackages } from '../parsers/import-parser.js';
 import {
   extractAllDependencies,
   extractDependencies,
   extractProductionDependencies,
-} from '@/parsers/package-parser';
+} from '../parsers/package-parser.js';
 
 function getDeclaredDependencies(
   packageJson: PackageJson,

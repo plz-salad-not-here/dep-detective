@@ -1,6 +1,6 @@
 import { R } from '@mobily/ts-belt';
 import { match } from 'ts-pattern';
-import type { AppResult, CliOptions, OutputFormat } from '@/domain/types';
+import type { AppResult, CliOptions, OutputFormat } from '../domain/types.js';
 
 const DEFAULT_OPTIONS: CliOptions = {
   format: 'text',
